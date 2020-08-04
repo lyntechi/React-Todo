@@ -61,7 +61,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div>
+        <div className="addChore">
           <h1>Lyn Techi's To-Do-List</h1>
           <TodoForm addItem={this.addItem} />
         </div>
