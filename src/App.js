@@ -50,6 +50,11 @@ class App extends React.Component {
       choresList: [...this.state.choresList, newItem],
     });
   };
+  clearItemList = ()=>{
+    this.setState({
+      choresList: [],
+    })
+  }
 
   render() {
     return (
@@ -60,6 +65,7 @@ class App extends React.Component {
           choresList={this.state.choresList}
           toggleItem={this.toggleItem}
         />
+         <button onClick={this.clearItemList}>Clear List</button>
       </div>
     );
   }
