@@ -40,6 +40,7 @@ class App extends React.Component {
       }),
     });
   };
+
   addItem = (itemName) => {
     const newItem = {
       chore: itemName,
@@ -50,6 +51,7 @@ class App extends React.Component {
       choresList: [...this.state.choresList, newItem],
     });
   };
+
   clearItemList = () => {
     this.setState({
       choresList: [],
@@ -59,14 +61,20 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-       <div><h1>Lyn Techi's To-Do-List</h1>
-        <TodoForm addItem={this.addItem} /></div> 
-        
-        <div><TodoList
-          choresList={this.state.choresList}
-          toggleItem={this.toggleItem}
-        />
-        <button className="clear" onClick={this.clearItemList}>Clear List</button></div>
+        <div>
+          <h1>Lyn Techi's To-Do-List</h1>
+          <TodoForm addItem={this.addItem} />
+        </div>
+
+        <div>
+          <TodoList
+            choresList={this.state.choresList}
+            toggleItem={this.toggleItem}
+          />
+          <button className="clear" onClick={this.clearItemList}>
+            Clear List
+          </button>
+        </div>
       </div>
     );
   }
