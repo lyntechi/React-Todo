@@ -13,12 +13,11 @@ class TodoForm extends React.Component {
     console.log(e.target.value);
   };
 
-  handleSubmit = e =>{
+  handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addItem(this.state.itemText)
-    this.setState({ itemText:""})
-   
-  }
+    this.props.addItem(this.state.itemText);
+    this.setState({ itemText: "" });
+  };
 
   render() {
     return (
@@ -28,9 +27,9 @@ class TodoForm extends React.Component {
           name="itemText"
           value={this.state.itemText}
           onChange={this.handleChanges}
-        /><br/>
-        <button>Add Chore</button>
-       
+        />
+        <br />
+        <button className="add">Add Chore</button>
       </form>
     );
   }

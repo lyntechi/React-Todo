@@ -4,9 +4,9 @@ import React from "react";
 import Todo from "./Todo";
 
 export default function ItemList(props) {
-  console.log(props)
+  console.log(props);
   return (
-    <div>
+    <div className="todo"> 
       {props.choresList.map((item) => {
         return <Todo key={item.id} item={item} toggleItem={props.toggleItem} />;
       })}

@@ -50,22 +50,23 @@ class App extends React.Component {
       choresList: [...this.state.choresList, newItem],
     });
   };
-  clearItemList = ()=>{
+  clearItemList = () => {
     this.setState({
       choresList: [],
-    })
-  }
+    });
+  };
 
   render() {
     return (
       <div className="App">
-        <h1>Lyn Techi's To-Do-List</h1>
-        <TodoForm addItem={this.addItem} />
-        <TodoList
+       <div><h1>Lyn Techi's To-Do-List</h1>
+        <TodoForm addItem={this.addItem} /></div> 
+        
+        <div><TodoList
           choresList={this.state.choresList}
           toggleItem={this.toggleItem}
         />
-         <button onClick={this.clearItemList}>Clear List</button>
+        <button className="clear" onClick={this.clearItemList}>Clear List</button></div>
       </div>
     );
   }
